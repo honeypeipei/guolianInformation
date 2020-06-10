@@ -1,0 +1,30 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "TestCase",
+    "children" : [ {
+      "name" : "test_getproduct",
+      "children" : [ {
+        "name" : "Testgetproduct",
+        "children" : [ {
+          "name" : "test_getproduct_01",
+          "uid" : "174c987088e792ce",
+          "parentUid" : "ccc50c292341898fe857a1787d2a8669",
+          "status" : "passed",
+          "time" : {
+            "start" : 1585815585946,
+            "stop" : 1585815586147,
+            "duration" : 201
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "ccc50c292341898fe857a1787d2a8669"
+      } ],
+      "uid" : "ea8a41c71bcf63838aa182e5fcf046b5"
+    } ],
+    "uid" : "ee79ae265a842e48c4df30f006daaf4e"
+  } ]
+}

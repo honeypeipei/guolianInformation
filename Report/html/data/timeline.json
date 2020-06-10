@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-P7O842L",
+    "children" : [ {
+      "name" : "540-MainThread",
+      "children" : [ {
+        "name" : "test_login_01",
+        "uid" : "e8800045012f3613",
+        "parentUid" : "72781351ee7a671d786870e483a2555b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591777009866,
+          "stop" : 1591777022258,
+          "duration" : 12392
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_login_02",
+        "uid" : "669cf37978a91dd7",
+        "parentUid" : "72781351ee7a671d786870e483a2555b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591777022258,
+          "stop" : 1591777023606,
+          "duration" : 1348
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "72781351ee7a671d786870e483a2555b"
+    } ],
+    "uid" : "1348c871acacb45cbbd240210fcb1ff9"
+  } ]
+}

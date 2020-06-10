@@ -1,0 +1,3 @@
+INFO     root:Log.py:75 [INFO 2020-06-10 16:17:02]文件已经开始执行
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): dev.udms.guolianzj.com:80
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://dev.udms.guolianzj.com:80 "POST /api/system/login HTTP/1.1" 204 0

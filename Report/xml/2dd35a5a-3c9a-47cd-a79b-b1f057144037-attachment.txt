@@ -1,0 +1,4 @@
+INFO     root:Log.py:75 [INFO 2020-06-10 16:16:49]文件已经开始执行
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): dev.udms.guolianzj.com:80
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://dev.udms.guolianzj.com:80 "POST /api/system/login HTTP/1.1" 200 225
+INFO     root:Log.py:75 [INFO 2020-06-10 16:17:02]查询结果数据库成功：select id,register_name from tb_user where register_name='admin';

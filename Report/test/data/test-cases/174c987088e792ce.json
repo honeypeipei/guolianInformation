@@ -1,0 +1,117 @@
+{
+  "uid" : "174c987088e792ce",
+  "name" : "test_getproduct_01",
+  "fullName" : "TestCase.test_getproduct.Testgetproduct#test_getproduct_01",
+  "historyId" : "38aabbc727c4a8f644f484cb108b44b9",
+  "time" : {
+    "start" : 1585815585946,
+    "stop" : 1585815586147,
+    "duration" : 201
+  },
+  "description" : "\n            用例描述：测试get1\n        ",
+  "descriptionHtml" : "<pre><code>        用例描述：测试get1\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "action",
+    "time" : {
+      "start" : 1585815585944,
+      "stop" : 1585815585945,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n            用例描述：测试get1\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "浏览商品",
+      "time" : {
+        "start" : 1585815585946,
+        "stop" : 1585815585946,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "4918ae06d42a57a9",
+        "name" : "商品1",
+        "source" : "4918ae06d42a57a9.attach",
+        "type" : "text/plain",
+        "size" : 9
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "152580f954018886",
+      "name" : "log",
+      "source" : "152580f954018886.txt",
+      "type" : "text/plain",
+      "size" : 346
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "GetProduct"
+  }, {
+    "name" : "story",
+    "value" : "GetProduct"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_getproduct"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testgetproduct"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-P7O842L"
+  }, {
+    "name" : "thread",
+    "value" : "7016-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.test_getproduct"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "174c987088e792ce.json",
+  "parameterValues" : [ ]
+}

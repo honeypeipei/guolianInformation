@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Apr 02 16:19:45 CST 2020","Thu Apr 02 16:19:46 CST 2020","201","TestCase","test_getproduct","Testgetproduct","","","test_getproduct_01","
+            用例描述：测试get1
+        "

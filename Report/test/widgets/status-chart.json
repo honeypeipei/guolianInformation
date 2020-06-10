@@ -1,0 +1,11 @@
+[ {
+  "uid" : "174c987088e792ce",
+  "name" : "test_getproduct_01",
+  "time" : {
+    "start" : 1585815585946,
+    "stop" : 1585815586147,
+    "duration" : 201
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

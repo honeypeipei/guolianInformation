@@ -1,0 +1,26 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "GetProduct",
+    "children" : [ {
+      "name" : "GetProduct",
+      "children" : [ {
+        "name" : "test_getproduct_01",
+        "uid" : "174c987088e792ce",
+        "parentUid" : "a1817c5a5ae36f9814dc3b28359b9070",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585815585946,
+          "stop" : 1585815586147,
+          "duration" : 201
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a1817c5a5ae36f9814dc3b28359b9070"
+    } ],
+    "uid" : "0b2f6caf27140985cc803784a1d25f1e"
+  } ]
+}

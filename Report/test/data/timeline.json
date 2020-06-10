@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-P7O842L",
+    "children" : [ {
+      "name" : "7016-MainThread",
+      "children" : [ {
+        "name" : "test_getproduct_01",
+        "uid" : "174c987088e792ce",
+        "parentUid" : "f8fc3cb7bd0f11ad53dac990ce0b686b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1585815585946,
+          "stop" : 1585815586147,
+          "duration" : 201
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f8fc3cb7bd0f11ad53dac990ce0b686b"
+    } ],
+    "uid" : "1348c871acacb45cbbd240210fcb1ff9"
+  } ]
+}

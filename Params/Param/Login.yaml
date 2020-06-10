@@ -1,0 +1,191 @@
+---
+Login:
+  dec: 正常登录
+  parameters:
+    -
+      casedec: "正常登录"
+      url: /api/system/login
+      selectsql: select register_name,`password` from tb_user where register_name='admin' ORDER BY RAND() LIMIT 1;
+
+      data:
+        -
+          mode: "un"
+          auth: "admin"
+          password: "123"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: select id,register_name from tb_user where register_name='@sqlresult';
+
+
+    - casedec: "密码错误"
+      url: /api/system/login
+      selectsql: select register_name,`password` from tb_user where register_name='admin' ORDER BY RAND() LIMIT 1;
+
+      data:
+        - mode: "un"
+          auth: "admin"
+          password: "1234"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 204
+      responsesql: select id,register_name from tb_user where register_name='@sqlresult';
+
+    - casedec: "账户不存在"
+      url: /api/system/login
+      selectsql:
+
+      data:
+        - mode: "un"
+          auth: "admin1"
+          password: "1234"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 204
+      responsesql:
+
+    - casedec: "账户超长"
+      url: /api/system/login
+      selectsql:
+
+      data:
+        - mode: "un"
+          auth: "admin1admin1admin1admin1admin1admin1admin1"
+          password: "1234"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 204
+      responsesql:
+
+    - casedec: "密码超长"
+      url: /api/system/login
+      selectsql:
+
+      data:
+        - mode: "un"
+          auth: "admin"
+          password: "123412341234123412341234123412341234123412341234"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 204
+      responsesql:
+
+    - casedec: "mode节点传值不对"
+      url: /api/system/login
+      selectsql:
+      data:
+        - mode: "un111111"
+          auth: "admin"
+          password: "123"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql:
+
+    - casedec: "mode节点缺失"
+      url: /api/system/login
+      selectsql:
+      data:
+        - auth: "admin"
+          password: "123"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql:
+
+    - casedec: "auth节点缺失"
+      url: /api/system/login
+      selectsql:
+      data:
+        - mode: "un"
+          password: "123"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql:
+
+    - casedec: "password节点缺失"
+      url: /api/system/login
+      selectsql:
+      data:
+        - mode: "un"
+          auth: "admin"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql:
+
+    - casedec: "mode为空"
+      url: /api/system/login
+      selectsql:
+      data:
+        - mode: ""
+          auth: "admin"
+          password: "123"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql:
+
+    - casedec: "auth为空"
+      url: /api/system/login
+      selectsql:
+      data:
+        - mode: "un"
+          auth: ""
+          password: "123"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql:
+
+    - casedec: "password为空"
+      url: /api/system/login
+      selectsql:
+      data:
+        - mode: "un"
+          auth: "admin"
+          password: ""
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql:
+
+    - casedec: "账号已被禁用"
+      url: /api/system/login
+      selectsql: select register_name,`password` from tb_user where register_name='admin' ORDER BY RAND() LIMIT 1;
+
+      data:
+        - mode: "un"
+          auth: "admin"
+          password: "123"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: select id,register_name from tb_user where register_name='@sqlresult';

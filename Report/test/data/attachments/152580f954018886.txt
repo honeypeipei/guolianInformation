@@ -1,0 +1,3 @@
+INFO     root:Log.py:75 [INFO 2020-04-02 16:19:45]文件已经开始执行
+DEBUG    urllib3.connectionpool:connectionpool.py:221 Starting new HTTP connection (1): 119.3.179.94:9120
+DEBUG    urllib3.connectionpool:connectionpool.py:428 http://119.3.179.94:9120 "GET /pc_mall/productList?categoryId=1&isAdd=1&pageNum=1&pageSize=5 HTTP/1.1" 200 None

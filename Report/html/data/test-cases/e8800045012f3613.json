@@ -1,0 +1,174 @@
+{
+  "uid" : "e8800045012f3613",
+  "name" : "test_login_01",
+  "fullName" : "TestCase.test_login.Testlogin#test_login_01",
+  "historyId" : "12231f6e853cf3d8eeb98e4fe1baac67",
+  "time" : {
+    "start" : 1591777009866,
+    "stop" : 1591777022258,
+    "duration" : 12392
+  },
+  "description" : "\n            用例描述：测试正常登录\n        ",
+  "descriptionHtml" : "<pre><code>        用例描述：测试正常登录\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "action",
+    "time" : {
+      "start" : 1591777009866,
+      "stop" : 1591777009866,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "testStage" : {
+    "description" : "\n            用例描述：测试正常登录\n        ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "写入Log",
+      "time" : {
+        "start" : 1591777009866,
+        "stop" : 1591777009866,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "获取输入参数值,select register_name,`password` from tb_user where register_name='admin' ORDER BY RAND() LIMIT 1;",
+      "time" : {
+        "start" : 1591777009866,
+        "stop" : 1591777016042,
+        "duration" : 6176
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "开始请求接口,RUL: http://dev.udms.guolianzj.com/api/system/login,header:{'Content-Type': 'application/json;charset=utf-8', 'X-Api-Version': '1.X'},request:{'mode': 'un', 'auth': 'admin', 'password': '123'}",
+      "time" : {
+        "start" : 1591777016042,
+        "stop" : 1591777016089,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "获取预期结果值成功，查询Sql：select id,register_name from tb_user where register_name='admin';,查询结果：{'id': 1, 'register_name': 'admin'}",
+      "time" : {
+        "start" : 1591777022258,
+        "stop" : 1591777022258,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "接口返回结果：{'code': 200, 'body': {'id': 1, 'register_name': 'admin', 'token': 'c2hhMjU2.eyJleHBpcmVkX2RhdGUiOjE1OTE4NjM0MTE2NTYsImlkIjoxfQ.rD8DAtWKnb39tYk_TYjWBox7qxQLkWOKMP2VcEMMWCQ', 'perms': ['hierarchy.add', 'hierarchy.test', 'hierarchy.delete', 'hierarchy.view']}, 'text': '{\"id\":1,\"register_name\":\"admin\",\"token\":\"c2hhMjU2.eyJleHBpcmVkX2RhdGUiOjE1OTE4NjM0MTE2NTYsImlkIjoxfQ.rD8DAtWKnb39tYk_TYjWBox7qxQLkWOKMP2VcEMMWCQ\",\"perms\":[\"hierarchy.add\",\"hierarchy.test\",\"hierarchy.delete\",\"hierarchy.view\"]}', 'time_consuming': 52.942, 'time_total': 0.052942, 'header': {'Server': 'nginx/1.14.0 (Ubuntu)', 'Date': 'Wed, 10 Jun 2020 08:16:51 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '225', 'Connection': 'keep-alive'}}",
+      "time" : {
+        "start" : 1591777022258,
+        "stop" : 1591777022258,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "82dbe1c563b32f5",
+      "name" : "log",
+      "source" : "82dbe1c563b32f5.txt",
+      "type" : "text/plain",
+      "size" : 463
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 5,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "Login"
+  }, {
+    "name" : "severity",
+    "value" : "blocker"
+  }, {
+    "name" : "story",
+    "value" : "测试正常登录"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCase"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testlogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-P7O842L"
+  }, {
+    "name" : "thread",
+    "value" : "540-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCase.test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "blocker",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e8800045012f3613.json",
+  "parameterValues" : [ ]
+}

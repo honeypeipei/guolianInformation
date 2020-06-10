@@ -1,0 +1,158 @@
+---
+CreateHierarchy:
+  dec: 正常登录
+  parameters:
+    -
+      casedec: "创建一级层级"
+      url: /api/hierarchy/add
+      selectsql:
+
+      data:
+        -
+          name: "公司"
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+    -
+      casedec: "创建二级层级"
+      url: /api/hierarchy/add
+      selectsql: SELECT id from tb_hierarchy where parent_id IS NULL ORDER BY RAND() LIMIT 1
+      data:
+        -
+          name: "公司"
+          parent_id: 55
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+    -
+      casedec: "名称超长"
+      url: /api/hierarchy/add
+      selectsql: SELECT id from tb_hierarchy where parent_id IS NULL ORDER BY RAND() LIMIT 1
+      data:
+        -
+          name: "公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司公司"
+          parent_id: 55
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+    -
+      casedec: "parent_id不存在"
+      url: /api/hierarchy/add
+      selectsql: SELECT id from tb_hierarchy where parent_id IS NULL ORDER BY RAND() LIMIT 1
+      data:
+        -
+          name: "公司"
+          parent_id: 99999
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 204
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+    -
+      casedec: "name节点缺失"
+      url: /api/hierarchy/add
+      selectsql: SELECT id from tb_hierarchy where parent_id IS NULL ORDER BY RAND() LIMIT 1
+      data:
+        -
+          parent_id: 99999
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+    - casedec: "name值传空"
+      url: /api/hierarchy/add
+      selectsql: SELECT id from tb_hierarchy where parent_id IS NULL ORDER BY RAND() LIMIT 1
+      data:
+        -
+          name:
+          parent_id: 99999
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+    - casedec: "name=''"
+      url: /api/hierarchy/add
+      selectsql: SELECT id from tb_hierarchy where parent_id IS NULL ORDER BY RAND() LIMIT 1
+      data:
+        - name: ''
+          parent_id: 99999
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+    - casedec: "一级name重复"
+      url: /api/hierarchy/add
+      selectsql: SELECT name,parent_id from tb_hierarchy where parent_id IS  NULL ORDER BY RAND() LIMIT 1
+      data:
+        - name: '公司'
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 204
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+
+    - casedec: "二级name重复"
+      url: /api/hierarchy/add
+      selectsql: SELECT name,parent_id from tb_hierarchy where parent_id IS not NULL ORDER BY RAND() LIMIT 1
+      data:
+        - name: '公司'
+          parent_id: 99999
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 204
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+    - casedec: "parent_id 是字符"
+      url: /api/hierarchy/add
+      selectsql: SELECT name,parent_id from tb_hierarchy where parent_id IS not NULL ORDER BY RAND() LIMIT 1
+      data:
+        - name: '公司'
+          parent_id: 'ABC'
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+
+GetHierarchy:
+  dec: 获取所有组织架构
+  parameters:
+    - casedec: "获取所有组织架构"
+      url: /api/hierarchy/all
+      header: {
+        "Content-Type": "application/json;charset=utf-8",
+        "X-Api-Version": "1.X"
+      }
+      responsecode: 200
+      responsesql: SELECT id,name,parent_id from tb_hierarchy where id ='@sqlresult';
+
+
+

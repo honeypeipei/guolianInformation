@@ -1,0 +1,36 @@
+---
+GetProduct:
+  dec: getproduct
+  parameters:
+    -
+      url: /pc_mall/productList
+      selectsql: SELECT id from pms_product_category A where LEVEL=2 ORDER BY RAND() LIMIT 1;
+
+      data:
+        -
+          categoryId: 1
+          isAdd: 1
+          pageNum: 1
+          pageSize: 5
+      header: {
+        "Connection": 'close',
+        "Origin": 'null'
+      }
+      responsecode: 200
+      responsesql: SELECT id from pms_product_category A where LEVEL=2 ORDER BY RAND() LIMIT 1;
+
+    - url: /pc_mall/productList
+      selectsql: SELECT id from pms_product_category A where LEVEL=2 ORDER BY RAND() LIMIT 1;
+      data:
+        - categoryId: 1
+          isAdd: 1
+          pageNum: 1
+          pageSize: 5
+      header: {
+        "Connection": 'close',
+        "Origin": 'null'
+      }
+
+      responsecode: 200
+      responsesql: SELECT id from pms_product_category A where LEVEL=2 ORDER BY RAND() LIMIT 1;
+
